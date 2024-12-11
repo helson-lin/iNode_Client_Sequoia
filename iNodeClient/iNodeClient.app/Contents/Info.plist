@@ -42,6 +42,8 @@
 	<string>10.8</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 ___FULLUSERNAME___. All rights reserved.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>NetworkView</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

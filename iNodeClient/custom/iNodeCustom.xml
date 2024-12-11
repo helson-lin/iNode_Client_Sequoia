@@ -2,22 +2,20 @@
 <msg>
     <content>
         <common>
-            <procomVal>19</procomVal>
+            <procomVal>51</procomVal>
             <funcomVal>1</funcomVal>
-            <cusTimeStamp>1482907338</cusTimeStamp>
-            <cusTimeString>2016-12-28 14:42:18</cusTimeString>
+            <cusTimeStamp>1625036539</cusTimeStamp>
+            <cusTimeString>2021-06-30 00:02:19</cusTimeString>
             <cusAddInfo></cusAddInfo>
+            <areaKey>0</areaKey>
         </common>
         <functions>
             <acl>0</acl>
             <wanControl>0</wanControl>
             <drvErr>0</drvErr>
             <dynamicPwdVerify>0</dynamicPwdVerify>
-            <dynamicVifInfo>0</dynamicVifInfo>
-            <msgAuthOpt>1</msgAuthOpt>
-            <msgAuthInfo>1</msgAuthInfo>
-            <msgAuthServIP>1.1.1.1</msgAuthServIP>
-            <msgAuthServPort>9025</msgAuthServPort>
+            <dynamicVifInfo>1</dynamicVifInfo>
+            <msgAuthOpt>0</msgAuthOpt>
         </functions>
         <x1>
             <upVer>1</upVer>
@@ -49,6 +47,22 @@
             <authDefaultType>RADIUS</authDefaultType>
             <gatewayAuth>0</gatewayAuth>
             <getSmsVryCountdownValue>60</getSmsVryCountdownValue>
+            <TLSVersion>0</TLSVersion>
         </sslvpn>
+        <guiOptions>
+            <linuxDeskIcon>false</linuxDeskIcon>
+            <macosDeskIcon>false</macosDeskIcon>
+            <mainIcon>false</mainIcon>
+            <subTitle></subTitle>
+            <linuxDeskIconName></linuxDeskIconName>
+            <macosDeskName></macosDeskName>
+            <mainIconName></mainIconName>
+            <hideCopyRight>false</hideCopyRight>
+        </guiOptions>
+        <EAD>
+            <useEAD>1</useEAD>
+            <EADIP></EADIP>
+            <EADPORT></EADPORT>
+        </EAD>
     </content>
 </msg>

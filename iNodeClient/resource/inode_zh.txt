@@ -4,11 +4,12 @@ MAC_LINUX_DESCRIPTION_HP=iNode智能客户端 (JF388A)
 MAC_LINUX_DESCRIPTION_H3C=iNode智能客户端
 MAC_LINUX_VERSION=软件版本
 MAC_LINUX_VERSION_NAME=iNode
-MAC_LINUX_VERSION_DETAIL_SHOW=PC 7.3 (E0585)
-MAC_LINUX_INTERNAL_VERSION_DETAIL_SHOW=V700R003B05D088
-MAC_LINUX_VERSION_DETAIL=7.30-E0585
-MAC_LINUX_PRODUCTOR_H3C=版权所有 (c) 2004-2021 新华三技术有限公司。
-MAC_LINUX_PRODUCTOR_HP=(c) 版权所有 2021 惠普公司。
+MAC_LINUX_VERSION_DETAIL_SHOW=PC 7.3 (E0630)
+MAC_LINUX_INTERNAL_VERSION_DETAIL_SHOW=V700R003B05D131
+MAC_LINUX_VERSION_DETAIL=7.30-E0630
+MAC_LINUX_PRODUCTOR_H3C=版权所有 (c) 2004-2023 新华三技术有限公司。
+MAC_LINUX_PRODUCTOR_HP=(c) 版权所有 2023 惠普公司。
+MAC_LINUX_PRODUCTOR_UNIS=版权所有 (c) 2004-2023 北京紫光恒越网络科技有限公司。
 MAC_LINUX_USEDTIME=上网计时
 
 ##### Menu and tool bar #####
@@ -31,6 +32,8 @@ MAC_LINUX_OPERATION=&操作
 MAC_LINUX_OPERATION_DES=操作
 MAC_LINUX_CLIENTS_SETTING=&配置客户端运行方式
 MAC_LINUX_CLIENTS_SETTING_DES=配置客户端运行方式
+MAC_LINUX_DAM_STATUS=&查看DAM运行状态
+MAC_LINUX_DAM_STATUS_DES=查看DAM运行状态
 MAC_LINUX_HELP=&帮助
 MAC_LINUX_HELP_DES=帮助
 MAC_LINUX_ABOUT=关于
@@ -40,7 +43,7 @@ MAC_LINUX_SECTRAP=&触发安全认证
 MAC_LINUX_SECTRAP_DES=触发安全认证
 MAC_LINUX_UPGRADE=升级
 MUI_ChgPwdOnline=在线修改密码
-
+MUI_ReConnect=正在重新连接
 ##### Button resource #########################################
 MAC_LINUX_BUTTON_OK=确定
 MAC_LINUX_BUTTON_CANCEL=取消
@@ -65,6 +68,7 @@ MAC_LINUX_CARRY_VERSION=上传客户端版本号
 MAC_LINUX_UPLOAD_IP=上传IP地址
 MAC_LINUX_BROADCAST_LOGOFF=使用广播下线
 MAC_LINUX_WkChkAutoCon=网络恢复后自动重连
+MAC_LINUX_EDCODE=E盾码
 MAC_LINUX_COMMON=:
 MAC_LINUX_AUTO_AUTH=自动登陆
 MAC_LINUX_ReauthTimesStc=自动重连次数:
@@ -100,7 +104,7 @@ MAC_LINUX_PROPERTY_GENERAL=常规
 MAC_LINUX_PROPERTY_NETWORK=网络
 MAC_LINUX_SERVER_IP=服务器IP
 MAC_LINUX_PgNetworkInputIp=请输入服务器IP。
-MAC_LINUX_PgNetworkInvalidIp=您输入的管理中心IP为无效的IP。
+MAC_LINUX_PgNetworkInvalidIp=您输入的服务器IP为无效的IP。
 MAC_LINUX_STATUS_SLEEP=您已经下线，网络恢复时将会自动重连。
 MAC_LINUX_Default_ConName=我的802.1X连接
 MAC_LINUX_FORBID_PAP=禁用802.1X PAP认证
@@ -118,6 +122,8 @@ XUI_ConnIsOff=连接已断开
 XUI_ConnectCut=连接失败，请与管理员联系
 XUI_ReConnetPrmpt=本次认证失败，
 XUI_ReConnetPrmptEnd=后将会自动重认证
+XUI_UnknownNetworkErr=未知网络错误
+CUS_1xDomain=域
 
 
 MUI_UserPwdChgDlgTitle=用户密码修改
@@ -138,10 +144,11 @@ CUI_PrgCusUpdHintForce=检测到客户端新的配置，需要退出客户端进
 CUI_PrgUpdHintHead_NEW=客户端升级程序下载完成，即将自动升级，升级后的版本为
 CUI_PrgUpdHintTail=，升级后需要用户重启机器并重新认证，准备好后请确认。
 CUI_PrgCusUpdHint=客户端即将进行配置的自动升级，升级后需要用户重新认证，请在准备好后单击<确定>按钮。
-CUI_PrgUpdHintHead=客户端即将进行自动升级，升级后版本号为
+CUI_PrgCusUpdHead=客户端将在稍后关闭并进行配置的自动升级。
+CUI_PrgUpdHintHead=客户端将在稍后关闭并进行版本的自动升级，升级后版本号为
 MUI_UpdateFileNoExist=升级包已被删除，请重新上线下载升级包。
 MUI_BeSureExitWithOneCon=目前有1个在线的连接，退出iNode智能客户端将断开与网络的连接，确实要退出吗？
-MUI_ReadConnSumLimit=已到达该协议允许创建的连接数上限（5），无法创建新连接。
+MUI_ReadConnSumLimit=已到达该协议允许创建的连接数上限（25），无法创建新连接。
 MUI_ReadConnSumLimitSsl=已到达SSL VPN协议允许创建的连接数上限（50），无法创建新连接。
 MUI_ConnectionExist=连接已存在。
 MUI_ConnectionNameEmpty=连接名不能为空。
@@ -149,7 +156,9 @@ MUI_UserPwdEmpty=用户密码不能为空。
 MUI_UserNameEmpty=用户名不能为空。
 MUI_NICInfoEmpty=网卡信息不能为空。
 MUI_ChgUserPwd_Title=修改密码
-MUI_NoComponent=没有组件。
+MUI_NoComponent=没有组件
+MUI_SKF_UKEY_PIN_TITLE=智能卡PIN码
+MUI_SKF_UKEY_PIN_DES=请输入国密智能卡PIN码。
 
 ####### Authentication MSG #############
 MAC_LINUX_AUTHEN_CONNECT=连接网络...
@@ -190,7 +199,11 @@ MAC_LINUX_AUTHEN_SEC_FAIL_FWNOENABLED=当前防火墙软件不可用。
 MAC_LINUX_AUTHEN_SEC_FAIL_NOHD=未安装硬盘加密软件。
 MAC_LINUX_AUTHEN_SEC_FAIL_NOPM=未安装补丁管理软件。
 MAC_LINUX_AUTHEN_SEC_FAIL_PMNOENABLED=当前补丁管理软件不可用。
-
+MAC_LINUX_secCheckHeadScore=安全检查结果评分：
+MAC_LINUX_secCheckRiskLevel=风险等级：
+MAC_LINUX_secCheckRiskLevel0=低风险
+MAC_LINUX_secCheckRiskLevel1=中风险
+MAC_LINUX_secCheckRiskLevel2=高风险
 ######### Security auth module (SAU) #########
 SAU_HoursMid=小时
 SAU_MinutesMid=分
@@ -220,7 +233,10 @@ SAU_MsgAbortOnlineReq=未收到服务器回应，即将强行下线，请检查�
 SAU_MsgSecurityServerDumbY=未收到服务器回应，不能通过安全检查，请检查终端能否正常访问网络或者与管理员联系
 SAU_OfflineEADError=您定制的组件没有包含服务器要求的EAD，请与管理员联系
 SAU_SyncUserErr=安全认证失败，当前连接即将被强行中断，请与管理员联系
+SAU_ChgPwdMessageErr=您
 SAU_SyncHostNameErr=主机名绑定失败，当前连接即将被强行中断
+SAU_SyncDomainBindErr=您的机器没有绑定到相应的域，当前连接即将被强行中断
+SAU_SyncDomainLogonErr=您没有登录到域，当前连接即将被强行中断
 SAU_PktTooLargeErr=安全检查项过多，安全检查失败。请联系管理员处理。
 SAU_InstallAVSoft=检测到本机装有防病毒软件：
 SAU_NormalVersionVirus=病毒库版本：
@@ -240,8 +256,7 @@ SAU_ASFailMsgHead=防间谍软件检查发现安全隐患，系统管理员提�
 SAU_APFailMsgHead=防钓鱼软件检查发现安全隐患，系统管理员提示信息：
 SAU_FWFailMsgHead=防火墙软件检查发现安全隐患，系统管理员提示信息：
 SAU_HDFailMsgHead=硬盘加密软件检查发现安全隐患，系统管理员提示信息：
-SAU_SoftFailMsgHead=受控软件检查发现安全隐患，系统管理员提示信息
-：
+SAU_SoftFailMsgHead=受控软件检查发现安全隐患，系统管理员提示信息：
 SUI_gszAVUpdateURLtail=升级或者修复防病毒软件的URL为:
 SUI_gszASUpdateURLtail=升级或者修复防间谍软件的URL为:
 SUI_gszAPUpdateURLtail=升级或者修复防钓鱼软件的URL为:
@@ -266,13 +281,34 @@ SAU_WeakPwdMsgHead=密码管理检查发现安全隐患，系统管理员提示�
 SAU_NoAllowedPMHead=在您的机器上缺少EAD策略要求的补丁管理软件，请安装：
 SAU_NoPMSoftNptSafeWarning=该机器上没有安装符合要求的补丁管理软件，安全检查未通过。为确保您的机器和网络安全，请安装。
 UI_CONNECTION_MULTI_ACTIVE=已有相同协议的连接处于活动状态，请先断开活动的连接。
+VUI_IPsecVPNActive=已有L2TP IPsec VPN连接处于活动状态，当前连接不能使用。
+VUI_1XConnActive=已有802.1X连接活动状态，当前连接不能使用。
+VUI_PortalConnActive=已有Portal连接处于活动状态，当前连接不能使用。
+VUI_SSLVPNConnActive=已有SSL VPN连接处于活动状态，当前连接不能使用。
+VUI_WlanConnActive=已有无线连接处于活动状态，当前连接不能使用。
+VUI_EadConnActive=已有EAD连接处于活动状态，当前连接不能使用。
+
 SAU_MSGBlackServices= 当前安全检查发现异常进程，异常进程为： 
 SAU_MSGWhiteServices= 当前安全检查发现异常，需必须运行以下进程： 
 SAU_MSGBlackSofts= 当前安全检查发现异常软件，异常软件为： 
 SAU_MSGWhiteSofts= 当前安全检查发现异常，需必须安装以下软件：
 
+SAU_ScreensaverErrActive=屏幕保护未开启
+SAU_ScreensaverErrProtect=屏幕保护密码未开启
+SAU_ScreensaverErrTimeout=屏幕保护等待时长设置违规，最大等待时长应为
+SAU_ScreensaverCheckFailMsgHead=屏幕保护检查发现安全隐患，系统管理员提示信息：
+SAU_MinutesEnd=分钟
+SAU_DAMRegRemindDayHead=请在
+SAU_DAMRegRemindDayTail=天内完成桌面资产注册。
+SAU_DamRegCheckFailMsgHead=资产没有注册，系统管理员提示信息：
+
+SAU_AntiRunUnVm=客户端禁止在虚拟机下运行，用户将被强制下线。
 ######### Common module (CMN) #########
 CMN_ProxyProgFoul=代理程序抑制检查违例 -- 当前连接将被下线。
+CMN_MultiNicFoul=禁用多网卡检测不通过，将强制用户下线。
+CMN_MultiIPFoul=当前认证网卡配置了多个IP地址，用户将被强制下线。
+CMN_MacChangeFoul=当前认证使用网卡的MAC地址已被修改，将强制用户下线。
+CMN_PingOnlineFoul=在线Ping外网检查失败，将强制用户下线。
 
 ### Error Massege #####################
 MAC_LINUX_ERROR_MSG_1=请输入连接名。
@@ -287,10 +323,13 @@ MAC_LINUX_ERROR_MSG_9=用户名长度不能超过97个字节。 \n 一个英文�
 MAC_LINUX_ERROR_MSG_10=请输入RSA码。
 MAC_LINUX_ERROR_MSG_11=两次输入的密码不一致。
 MAC_LINUX_ERROR_MSG_12=新密码与旧密码不能一样，请重新输入。
-
+MAC_LINUX_ERROR_MSG_13=该密码为初始登录密码，请联系管理员修改密码，或连接成功后点击在线修改密码。
+MAC_LINUX_ERROR_MSG_14=用户密码长度至少为8,并且至少包含字母,数字和特殊字符。
+MAC_LINUX_ERROR_MSG_EDcode=请输入E盾码
+MAC_LINUX_ERROR_MSG_EDcodeLen=E盾码长度不正确。
 #### Operation resources #####
 MAC_LINUX_ERROR_TITLE=错误信息
-MAC_LINUX_NIC_INFO_ERROR网卡信息错误，请重启iNode客户端或联系网络管理员。
+MAC_LINUX_NIC_INFO_ERROR=网卡信息错误，请重启iNode客户端或联系网络管理员。
 MAC_LINUX_CONN_DELETE_DETERMINE=确实要删除这个连接吗？
 MAC_LINUX_ComfirmExitClient=确认退出客户端
 MAC_LINUX_BeSureToExit=确实要退出iNode智能客户端程序吗？
@@ -324,6 +363,22 @@ WUI_WLAN_PATTERN_AUTO=自动
 WUI_WLAN_IDENTIY_CHOICE=选择
 WUI_WLAN_ADD=加入
 WUI_WLAN_CancelBtn=取消
+WUI_WLAN_SECURITY_PROTO=安全协议
+WUI_WLAN_EAP_PROTO=EAP协议
+WUI_WLAN_USER_PRIVATE_KEY=用户私钥
+WUI_WLAN_USER_PRIVATE_KEY_PASS=私钥密码
+WUI_WLAN_ANONYMOUS_ID=匿名身份
+WUI_WLAN_PEAP_VER=PEAP版本
+WUI_WLAN_INTERNAL_AUTH=内部认证
+WUI_WLAN_USER_PRIVATE_KEY_PASS_EMPTY=请输入私钥密码
+WUI_WLAN_CONNECT_HIDDEN_NETWORK=连接到隐藏网络
+WUI_WLAN_BEGIN_SCAN_HIDDEN_AP=开始扫描隐藏SSID
+WUI_WLAN_WAIT_SCAN_HIDDEN_AP=正在扫描隐藏SSID
+WUI_WLAN_SCAN_HIDDEN_AP_SUCCESS=发现隐藏SSID
+WUI_WLAN_SCAN_HIDDEN_AP_FAILED=未发现隐藏SSID
+WUI_WLAN_NOT_SUPPORT=该系统未适配无线认证功能
+
+
 MAC_LINUX_WIFI_CONNECT_A=该WiFi网络需要密码
 MAC_LINUX_INPUT_WIFI_B=您也可以将Mac靠近任何已接入此网络并已添加您为联系人的
 MAC_LINUX_INPUT_WIFI_C=来访问此WI-FI网络
@@ -332,6 +387,9 @@ MAC_LINUX_WLERR_NONTYPE=无线网络异常，请重新选择
 MAC_LINUX_WLERR_CONNECTFAIL=连接失败
 MAC_LINUX_WLERR_CONNECTSUCC=连接成功
 MAC_LINUX_WLERR_CONNECTCUTOFF=断开连接
+MAC_LINUX_WLERR_NOT_SUPPROT_HIDDEN=不支持隐藏网络
+
+MAC_LINUX_WLERR_OPENLOCA=请开启系统定位服务
 
 ######### EAD UI module (EUI) #########
 EUI_EADConnect=EAD连接
@@ -342,6 +400,95 @@ EUI_EAD_PASSWORD=密码
 EUI_EAD_PATTERN_AUTO=自动
 EUI_EAD_IDENTIY_CHOICE=选择
 EUI_EAD_CancelBtn=取消
+
+######### IPSEC UI module (PUI) #########
+IUI_IPSECConnect=IPSEC协议
+IUI_IPSECPtDes=IPSEC是一种互联网安全协议
+IUI_DefaultConName=我的IpSec连接
+IUI_IPSEC_SECURITY_PROTOCOL=是否启用IpSec安全协议
+IUI_IPSEC_PATTERN=模式
+IUI_IPSEC_IDENTIY=身份
+IUI_IPSEC_USERNAME=用户名
+IUI_IPSEC_PASSWORD=密码
+IUI_IPSEC_PATTERN_AUTO=自动
+IUI_IPSEC_IDENTIY_CHOICE=选择
+IUI_IPSEC_ADD=加入
+IUI_IPSEC_CancelBtn=取消
+IUI_IPSEC_METHOD=验证方法
+IUI_IPSEC_METHOD_A=预共享密钥
+IUI_IPSEC_METHOD_B=证书
+IUI_IPSEC_IDENITY=身份验证字
+IUI_IPSEC_LNSserver=LNS服务器
+IUI_IPSEC_AltLNSserver=备用LNS服务器
+IUI_HigheCert=高级
+IUI_IKECert=IKE
+IUI_HighSeteCert=高级设置
+IUI_IKESeteCert=IKE设置
+IUI_L2TPSet=L2TP设置
+IUI_TunnelName=隧道名称
+IUI_AuthType=选择认证模式
+IUI_TunnelTime=发送HELLO报文时间间隔（S）
+IUI_TunnelPort=L2TP端口
+IUI_IPsecSet=L2TP设置
+IUI_Encapsulation=封装模式
+IUI_SurvivalTime=安全联盟生存周期
+IUI_SecurityProtocol=采用的安全协议
+IUI_EAuthenAlgorithm=ESP协议验证算法
+IUI_EncryAlgorithm=ESP协议加密算法
+IUI_AAuthenAlgorithm=AH协议验证算法
+IUI_AMode_A=CHAP
+IUI_AMode_B=PAP
+IUI_EnMode_A=Tunnel
+IUI_EnMode_B=Transport
+IUI_SeProtocol_A=ESP
+IUI_SeProtocol_B=AH
+IUI_SeProtocol_C=AH-ESP
+IUI_ESPAuthen_A=MD5
+IUI_ESPAuthen_B=SHA
+IUI_ESPAuthen_C=SHA256
+IUI_ESPAuthen_D=NULL
+IUI_EncryAuthenl_A=DES
+IUI_EncryAuthenl_B=3DES
+IUI_AHAuthen_A=MD5
+IUI_AHAuthen_B=SHA
+IUI_AHAuthen_C=SHA256
+IUI_L2TPUseTunnelPwd=使用隧道验证密码
+IUI_L2TPTunnelPwd=隧道验证密码
+IUI_L2TPAVPHidden=启用AVP隐藏
+IUI_IKEConsult=协商模式
+IUI_IKEConsult_A=Main
+IUI_IKEConsult_B=Aggressive
+IUI_IKEIDType=ID的类型
+IUI_IKEIDType_A=ip
+IUI_IKEIDType_B=name
+IUI_IKEVAlgorithm=验证算法
+IUI_IKEVAlgorithm_A=MD5
+IUI_IKEVAlgorithm_B=SHA
+IUI_IKEEAlgorithm=加密算法
+IUI_IKEEAlgorithm_A=DES-CBC
+IUI_IKEEAlgorithm_B=3DES-CBC
+IUI_IKEDiffieHellman=Diffie-Hellman组标识
+IUI_IKEDiffieHellman_A=Group1
+IUI_IKEDiffieHellman_B=Group2
+IUI_IKEPort=IKE端口
+IUI_ISAKMPSA=ISAKMP-SA生存周期
+IUI_NOFLSG=本端安全网关名字
+IUI_NOFLSGA=对端安全网关设备名字 
+IUI_IKESendKeep=定时发送KeepAlive报文
+IUI_IKESendKeepTime=时间间隔(s)
+IUI_IKEReceiveKeep=接收KeepAlive报文
+IUI_IKEKeepOvertime=超时间隔(s)
+IUI_ULnsServer=使用lns服务器
+IUI_UIpsecServer=使用Ipsec服务器
+IUI_UpsecServer=Ipsec服务器
+IUI_L2TPUFPS=使用PFS特性
+IUI_L2TPFPS=PFS特性
+IUI_L2TUPNAT=使用NAT穿越
+IUI_L2TPUFPS_A=dh-group1
+IUI_L2TPUFPS_B=dh-group2
+UI_UIpsecEadServer=开启EAD认证
+UI_UEadServer=EAD服务器地址
+UI_UEadPort=EAD服务器端口
 
 ######### Portal UI module (PUI) #########
 PUI_PortalProName=Portal协议
@@ -370,9 +517,10 @@ PUI_LogOKBtn=连接
 PUI_LogPropertyBtn=属性(&V)
 PUI_LogHighAuth=启用高级认证(&H)
 PUI_LogUsbCardAuth=智能卡认证(&K)
-PUI_LogMacAuth=MAC认证(&M)
+PUI_LogMacAuth=MAC认证
 PUI_PgNetWkChkAutoCon=网络恢复后自动重连(&R)
 PUI_ResumeConnExists=已存在网络恢复后自动重连的连接
+PUI_MACAuthStatic=MAC地址作为用户名和密码进行认证。
 
 PUI_CreatTwoStatic=Portal连接基本属性
 PUI_CreatTwoCommentStatic=您需要用户名和密码来访问网络，并选择上网所用的服务。
@@ -400,7 +548,7 @@ PUI_ProPwdStatic=密码(&P):
 PUI_ProServiceTypeStatic=服务类型(&T):
 PUI_ProPwdeChk=保存用户名和密码(&S)
 PUI_ProVersChk=上传客户端版本(&V)
-PUI_ProAutoChk运行后自动认证(&C)
+PUI_ProAutoChk=运行后自动认证(&C)
 PUI_ProUsbCardAuth=智能卡认证(&K)
 PUI_ProMacAuth==MAC认证(&M)
 
@@ -415,7 +563,7 @@ PUI_StatusAuthIPStatic=当前IP地址:
 PUI_StatusDisBtn=断开(&D)
 PUI_HintStatic=说明:本网络连接时间不作为用户计费依据。
 PAU_AuthFailed_RenewIP=Portal认证失败，网络故障或Portal服务器没有回应，请联系管理员。
-PAU_Auth_UNSUPPORT_EAP=Portalr认证失败，不支持EAP认证，请与管理员联系。
+PAU_Auth_UNSUPPORT_EAP=Portal认证失败，不支持EAP认证，请与管理员联系。
 PAU_User_AlreadyOnLine=Portal认证失败，请尝试断开该连接并重新认证。
 PAU_AuthFailed_Rejected=Portal认证失败，认证请求被拒绝。
 PAU_Processing_Another_Auth=Portal认证失败，该用户正在认证过程中，请稍后重试。
@@ -443,7 +591,7 @@ SLUI_AuthMode=认证模式
 SLUI_AutoAuth=自动认证
 SLUI_ChooseCert=选择客户端证书…
 SLUI_DynamicPWD=使用动态密码校验
-SLUI_MsgAuth=使用短信动态密码校验
+SLUI_MsgAuth=短信动态密码校验
 SLUI_Domain=域
 SLUI_DefaultConName=我的SSL VPN连接
 SLUI_GateWayAdr=请输入网关地址。
@@ -452,6 +600,8 @@ SLUI_CodeCertAuth=密码+证书认证
 SLUI_CertAuth=证书认证
 SLUI_CertUnknown=用户证书为空，请单击<选择客户端证书...>按钮选择证书。
 SLUI_SelConfig=选择证书
+SLUI_FileCert=文件证书
+SLUI_SmartCard=智能卡证书
 SLUI_WrongServerForm=网关信息有误，请输入正确的格式（如:x.x.x.x:443）
 SLUI_WrongServerPort=网关端口错误，请输入1~65535之间的有效值
 SLUI_GetSvrInfoFail=获取网关IP地址失败。  
@@ -469,14 +619,53 @@ SLUI_VerifyRASKey=校验动态密码
 SLUI_PutRASKey=请输入动态密码。
 SLUI_VerKey=输入验证码
 SLUI_PutVerKey=请输入验证码
-SLUI_GetRootCert=请选择跟证书。
+SLUI_GetRootCert=请选择根证书。
 SLUI_GetClientCert=请选择用户证书。
+SLUI_GetClientPriKey=请选择用户私钥。
 SLUI_ClientCertPwdEmpty=请输入用户证书密码。
 SLUI_ChooseCertFile=选择证书。
 SLUI_RootCertDes=根证书
 SLUI_ClientCertDes=用户证书
 SLUI_ClientCertPwd=用户证书密码
 SLUI_GetCertBtnDes=请选择...
+SLUI_SigCert=签名证书
+SLUI_SigKey=签名私钥
+SLUI_EncCert=加密证书
+SLUI_EncKey=加密私钥
+SLUI_SigKeyPwd=签名证书密码
+SLUI_EncKeyPwd=加密证书密码
+SLUI_CACertUnknown=根证书为空，请单击<选择客户端证书...>按钮选择根证书。
+SLUI_SignCertUnknown=签名证书为空，请单击<选择客户端证书...>按钮选择签名证书。
+SLUI_SignKeyUnknown=签名私钥为空，请单击<选择客户端证书...>按钮选择签名私钥。
+
+XUI_LoadUserCertFail=获取用户证书失败。
+XUI_LoadRootCertFail=获取根证书失败。
+XUI_VerifyPkeyFail=证书与私钥不匹配。
+XUI_WrongAuthType=用户认证类型错误，请重新配置认证类型或联系管理员。
+
+XUI_LoadGMRootCertFail=加载根证书失败。
+XUI_LoadSigCertFail=加载签名证书失败。
+XUI_LoadSigPkeyFail=加载签名私钥失败。
+XUI_VerifySigPkeyFail=签名证书与私钥不匹配。
+XUI_LoadEncCertFail=加载加密证书失败。
+XUI_LoadEncPkeyFail=加载加密私钥失败。
+XUI_VerifyEncPkeyFail=加密证书与私钥不匹配。
+XUI_LoadSKFLibraryFail=加载厂商SKF库失败。
+XUI_ConnSKFUkeyFail=连接国密智能卡失败。
+XUI_OpenSKFAppFail=打开智能卡中的应用失败。
+XUI_OpenSKFConFail=打开应用中的容器失败。
+XUI_SKFVerifyPINFailed=国密智能卡PIN码验证失败，剩余尝试次数%d。
+XUI_ExportSigCertFail=从智能卡中读取签名证书失败。
+XUI_ExportEncCertFail=从智能卡中读取加密证书失败。
+XUI_ConvertEncCertFail=加密证书格式转换失败。
+XUI_ECKeyExDataIDFail=获取EC秘钥扩展数据失败。
+XUI_SigPkeyFromConFail=构造签名秘钥失败。
+XUI_EncPkeyFromConFail=构造加密秘钥失败。
+XUI_GetSKFEngineFail=构造SKF引擎失败。
+XUI_SetSigPkeyExDataFail=签名秘钥设置扩展数据失败。
+XUI_SetEncPkeyExDataFail=加密秘钥设置扩展数据失败。
+XUI_SetSigPkeyEngineFail=签名秘钥设置SKF引擎失败。
+XUI_SetEncPkeyEngineFail=加密秘钥设置SKF引擎失败。
 
 SSLVPN_GetConnFailed=获取连接信息失败。
 SSLVPN_BuildVpnTunnel=建立VPN隧道...
@@ -532,14 +721,207 @@ SSLVPN_MsgVrfCodeInvalid=验证码长度不能超过16个字节。 \n 一个英�
 SSLVPN_GetGatewayIPFail=获取网关IP地址失败。
 SSLVPN_AutoConNotSupportVaildPic=自动认证不支持校验码和RSA动态密码。
 
-
 CMN_QueringVPNParam=正在查询SSL VPN网关参数...
 CMN_QueringDomainParam=正在查询SSL VPN域参数...
 CMN_QueryVPNParamSucc=查询成功。
 CMN_QueryVPNParamFailed=查询SSL VPN网关参数失败，请检查网络配置或联系管理员。
 CMN_QueryParamTimeout=VPN网关通信超时，请检查与VPN网关通信是否正常；如果和VPN网关通信异常，请选择其它VPN网关重试。
 CMN_QueryDomainParamFailed=查询SSL VPN域参数失败，请检查网络配置或联系管理员
+CMN_UserName_WrongForm=用户名有误，请输入正确格式的用户名（如:abc@cams）。
+
+CMN_MsgAuthTextLab1=验证码
+CMN_InputMsgAuth=输入验证码
+CMN_Vrf_OK=确 定
+CMN_Vrf_OK_Timer=确定(%1)
+CMN_Vrf_Cancel=取 消
+CMN_MsgAuthServ=短信服务器
+CMN_MsgAuthServPort=服务器端口
+CMN_MsgAuthServInfoTitle=配置短信服务器
+CMN_LINUX_PgSMSInputIp=请输入短信服务器IP。
+CMN_LINUX_PgSMSInputPort=请输入短信服务器端口。
+CMN_LINUX_ReqSMSSuccess=请求短信验证码成功。
+CMN_LINUX_ReqSMSAgain=请稍后请求验证码，剩余时间：
+CMN_LINUX_ReqSMSButNotNeed=无需使用短信验证码。
+CMN_MAC_LINUX_SMS_AUTHEN_BEGIN=开始请求短信验证码...
+CMN_Get_MsgVrfCode_Failed=获取验证码失败！
+CMN_NotFount_Username=请求验证码失败，未查询到该接入用户
+CMN_NotFount_Phone_NO=请求验证码失败，用户手机号无效
+CMN_MsgServer_Timeout=请求验证码失败，连接短信服务器超时
+
+#########  VPN auth module (VAU) #########
+VAU_ConfigureError=无法建立连接，请检查网络配置
+VAU_ConnDisconnected=连接已经断开
+VAU_StartUseSucc=连接成功，已上线
+
+#认证第一阶段，检查网络环境
+VAU_CheckEnv=检查本地网络环境...
+VAU_CheckingEnv=正在检查本地网络环境
+VAU_CheckEnvSucc=本地网络环境检查通过
+VAU_IPSecServiceRunning=Windows下的IPsec服务(IPsec Services或IPsec Policy Agent)未停止，请停用后重试
+VAU_IKEServiceRunning=Windows下的IKE服务(IKE and AuthIP IPsec Keying Modules)未停止，请停用后重试
+#认证第二阶段，IKE协商
+VAU_IpsecAuthenticating=IKE协商...
+VAU_IPSecStartAuthen=正在进行IKE协商
+VAU_IPSecAuthSuccess=IKE协商成功
+VAU_IKEProposalError=IKE配置错误
+VAU_IPSecProposalError=IPsec配置错误
+#认证第三阶段，建立隧道和会话
+VAU_L2TPAuthenticating=建立隧道和会话...
+VAU_L2TPStartAuthen=正在建立隧道和会话
+VAU_L2TPAuthenSuccess=隧道和会话建立成功
+#认证第三阶段，PPP协商
+VAU_PPPAuthenticating=PPP协商...
+VAU_PPPStartAuthen=正在进行PPP协商
+VAU_PPPAuthenticateSuccess=PPP协商成功
+#认证第四阶段，获取IP地址
+VAU_RefreshIP=获取虚拟网卡IP地址...
+VAU_RefreshIPStart=正在获取虚拟网卡的IP地址
+VAU_RefreshSuccess=获取虚拟网卡的IP地址成功
+
+VUI_TunnelPwdError=隧道密码错误
+XUI_UserNamePwdErr=用户名密码错误
+
+VAU_StartErrorIKE=IKE协商失败
+VAU_StartErrorL2TP=隧道或者会话建立失败
+VAU_StartErrorPPP=PPP协商失败
+VAU_StartErrorIKETimeout=IKE协商超时，请检查网络配置
+VAU_StartErrorL2TPTimeout=隧道或者会话建立超时，请检查网络配置
+VAU_StartErrorPPPTimeout=PPP协商超时，请检查网络配置
+VAU_StartErrorRefreshIPTimeout=获取IP超时，请检查网络配置
+VUT_startErrorGetLNSip=无法解析LNS地址，请检查网络配置
+VUT_startErrorGetSecondLNSip=无法解析备用LNS地址，请检查网络配置
+VUT_startErrorGetIPSECip=无法解析IPsec Server地址，请检查网络配置
+VUT_startErrorLNSEmpty=LNS地址不能为空
+VUI_InputValidLNSIP=LNS服务器不能为空。
+VUT_startErrorRefreshIP=刷新IP地址失败
+XUI_RefreshIPFail=IP地址刷新超时
+VUT_startErrorChangeUser=切换用户权限失败
+VUT_startErrorUpVersion=上传版本号导致用户名太长
+VUT_startErrorInitSocket=初始化socket失败，请检查网络配置  
+VUT_connErrorSystemSleep=系统休眠连接下线
+VUT_connErrorUsbKeyDown=智能卡已拔出
+VAU_ResumeCon=链路超时
+
+VAU_StartUseFailed=连接失败
+VAU_ConnNotDeactive=已有连接处于启动状态，不能再次启动
+VAU_ConnAleadyOnline=连接处于启动状态，不能再次启动
+
+VAU_L2TPConnectSecondLNS=正在连接备用LNS...
 
 XUI_RefreshIP=自动获取IP地址...
 XUI_RefreshIPCurrent=当前IP地址是
 
+
+######### DAMA  UI module (DUI)  独立应用版本的额外资源#########
+DUI_About=关于(&A)...
+DUI_Config=配置(&C)...
+DUI_AgentStatus=连接状态信息(&S)...
+DUI_RegAssert=注册桌面资产(&R)...
+DUI_DlgtTitle_Config=配置
+DUI_Language=语言
+DUI_LogLevel=日志级别
+DUI_ClientName=桌面资产管理客户端
+DUI_DlgtTitle_About=关于桌面资产管理客户端
+DUI_DamaName=H3C 桌面资产管理客户端
+DUI_Version=版本: 
+DUI_CorpInfo=版权所有 (c) 2004-2018 新华三技术有限公司，保留一切权利。
+DUI_Copyright=版权所有， 保留一切权利
+DUI_ProductInfo=产品信息
+DUI_RightInfo=版权信息
+
+######### DAMA  UI module (DUI)  公共部分的资源#########
+DUI_DosGetOnline=已连接上桌面资产管理服务器
+DUI_DosGetOffline=已断开与桌面资产管理服务器的连接
+DUI_ArsGetDone=已完成资产注册
+DUI_ArsGetUndone=您的资产还未注册，请及时按提示注册
+
+DUI_DlgTitle_AutoShutHint=自动定时关机提醒
+DUI_AutoShutHintHead=本机即将执行自动关机的时间为
+DUI_AutoShutHintTail=，请在以下选项中选择：
+DUI_AutoShutChoice1=好的，没问题。
+DUI_AutoShutChoice2=这次请不要关机，我还要继续使用。
+
+DUI_DlgTitile_ConfirmAssetInfo=资产信息确认
+DUI_ConfirmAssetInfo_Hint=如果以下资产信息与当前计算机不配套，请点击<取消>按钮以输入新的资产编号。
+DUI_ConfirmAssetInfo_Hint2=如果以下资产信息与当前计算机不配套，请联系管理员处理。
+DUI_DlgTitile_InputAssetInfo=请输入资产描述信息
+DUI_InputAssetInfo_Hint=为便于管理，请正确输入当前计算机的以下相关信息：
+
+DUI_StatusInfo=状态信息
+DUI_ConnStatus=连接状态: 
+DUI_RegStatus=资产注册状态: 
+DUI_DamOnline=已连接
+DUI_DamOffline=未连接
+DUI_Registered=已注册
+DUI_Unregistered=未注册
+DUI_AssetNo2=资产编号:
+DUI_ProxyIP=代理IP:
+DUI_AssetOwner2=资产责任人:
+
+DUI_Input_AssetNo=输入资产编号
+DUI_AssetNo=资产编号:
+DUI_AssetOwner=责任人:
+DUI_AssetGroup=资产分组:
+DUI_AssetConfig=型号:
+DUI_AssetPosition=物理位置:
+DUI_AssetVendor=生产厂商:
+DUI_AssetType=类型:
+DUI_AssetDescrip=描述:
+DUI_AssetType_PC=台式机
+DUI_AssetType_LAPTOP=笔记本
+DUI_AssetType_WORKSTATION=工作站
+DUI_AssetType_SERVER=服务器
+DUI_AssetType_OTHER=其他
+
+DUI_InvalidAsset_TryAgain=无效资产编号，请重新输入。
+DUI_AssetTaken_TryAgain=该资产编号已为其它资产所用，请确保正确输入。
+DUI_PlsInputAssetId=请确保正确输入当前计算机的资产编号。
+DUI_BindFail_TryAgain=资产编号与用户绑定有误，请重新输入。
+DUI_HintForCancelInput=取消本次资产注册操作，系统会在几分钟后再次要求注册。请确认是否要取消本次操作。
+
+DUI_AssetInfo_FillHint=带星号标记的输入项为必填项，请确保输入正确。
+
+######## DAMA  UI module (DUI)  与iNode融合版本的额外资源###########
+DUI_DlgtTitle_Status=桌面资产管理客户端状态
+DUI_DamRunStatus=运行状态:
+DUI_DamRuning=正在运行
+DUI_DamStopped=已停止
+
+######### passwod protection modoule  #########
+MUI_PwdEmpty=密码不能为空，请重新输入。
+MUI_PwdWrong=密码错误，请重新输入。
+MUI_RelPassWdProtDlgTitle=解除密码保护
+MUI_NoPassWdProtStatic=请输入客户端保护密码。
+MUI_UseExtendPwdStatic=请将随机数发给管理员获取保护密码。
+MUI_RandomStatic=随机数：
+MUI_PasswordStatic=密码：
+
+##### DIF MSG #####
+MAC_LINUX_DIF_MSG=&查看消息
+MAC_LINUX_DIF_MSG_DES=查看消息
+MAC_LINUX_DIF_WINDOW_TITLE=消息窗口
+MAC_LINUX_DIF_TITLE=标题
+MAC_LINUX_DIF_CONTENT=内容
+MAC_LINUX_DIF_LEVEL_TIP=提示消息
+MAC_LINUX_DIF_LEVEL_NOTICE=通知消息
+MAC_LINUX_DIF_LEVEL_WARNING=告警消息
+MAC_LINUX_DIF_BTN_TIP=提示
+MAC_LINUX_DIF_BTN_NOTICE=通知
+MAC_LINUX_DIF_BTN_WARNING=告警
+
+Portal_LoadCertsFail=加载证书失败，请确认证书是否正确。
+Portal_CertsError=服务器返回错误：证书不正确，请加载正确的证书。
+Portal_CertsPasswdErr=证书密码不正确。
+
+CMN_MultiWindowsOS=禁止安装多操作系统检查不通过，用户将被强制下线。
+SAU_ShareInfoCheckFailMsgHead=目录共享检查发现安全隐患，系统管理员提示信息：
+SAU_ShareErrForbidShare=禁止启用共享
+SAU_ShareErrInvalidUser=共享组或用户名非法：
+SAU_LowestVirusVersionRequired=最低病毒库版本要求: 
+SAU_LowestEngineVersionRequired=最低引擎版本要求: 
+SAU_MsgUserPCIsolated=您的电脑被限制在隔离区。
+SAU_MsgIsolateInfoTail=分钟之后您将不能获取隔离区以外的网络资源。
+SAU_MsgIsolateInfoHead=你的电脑没有满足安全要求，在
+CMN_reconnect=等待重连...
+CMN_NetCut=网卡被禁用或者网络电缆没有插好
+CMN_AddrChanged=IP地址改变，请检查网卡配置

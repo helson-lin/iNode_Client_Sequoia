@@ -4,11 +4,12 @@ MAC_LINUX_DESCRIPTION_HP=iNode Intelligent Client (JF388A)
 MAC_LINUX_DESCRIPTION_H3C=iNode Intelligent Client
 MAC_LINUX_VERSION=Version
 MAC_LINUX_VERSION_NAME=iNode
-MAC_LINUX_VERSION_DETAIL_SHOW=PC 7.3 (E0585)
-MAC_LINUX_INTERNAL_VERSION_DETAIL_SHOW=V700R003B05D088
-MAC_LINUX_VERSION_DETAIL=7.30-E0585
-MAC_LINUX_PRODUCTOR_H3C=Copyright (c) 2004-2021 New H3C Technologies Co., Ltd.
-MAC_LINUX_PRODUCTOR_HP=(c) Copyright 2021 Hewlett Packard Enterprise Development LP.
+MAC_LINUX_VERSION_DETAIL_SHOW=PC 7.3 (E0630)
+MAC_LINUX_INTERNAL_VERSION_DETAIL_SHOW=V700R003B05D131
+MAC_LINUX_VERSION_DETAIL=7.30-E0630
+MAC_LINUX_PRODUCTOR_H3C=Copyright (c) 2004-2023 New H3C Technologies Co., Ltd.
+MAC_LINUX_PRODUCTOR_HP=(c) Copyright 2023 Hewlett Packard Enterprise Development LP.
+MAC_LINUX_PRODUCTOR_UNIS=2004-2023 Beijing Unis Heng Yue Network Technology Ltd. All rights reserved.
 MAC_LINUX_USEDTIME=Duration
 
 
@@ -18,8 +19,31 @@ CMN_IeProxySetFoul=IE proxy setting suppression check violation -- current conne
 CMN_MultiNicFoul=Multi-NICs suppression check violation -- current connection will be cut off.
 CMN_IpModeSetFoul=IP allocation method check violation -- current connection will be cut off.
 CMN_MacChangeFoul=MAC address modification suppression check violation -- current connection will be cut off.
+CMN_PingOnlineFoul=The online ping external network check failed, current connection will be cut off.
+
 CMN_OfflineByForce=Offline by force.
 CMN_OffDevDisabled=Network interface card is disabled.
+CMN_MultiIPFoul=The authentication NIC has multiple IP addresses. The connection will be cut off.
+CMN_UserName_WrongForm=Please input the username in correct format (abc@cams).
+
+CMN_MsgAuthTextLab1=Verif. Code
+CMN_InputMsgAuth=Enter verif. code
+CMN_Vrf_OK=OK
+CMN_Vrf_OK_Timer=OK(%1)
+CMN_Vrf_Cancel=Cancel
+CMN_MsgAuthServ=SMS Server
+CMN_MsgAuthServPort=Server Port
+CMN_MsgAuthServInfoTitle=Configure SMS Server
+CMN_Get_MsgVrfCode_Failed=Failed to get verification code.
+CMN_LINUX_ReqSMSSuccess=The SMS verification code request was successful.
+CMN_LINUX_ReqSMSButNotNeed=No need to use SMS verification code.
+CMN_LINUX_ReqSMSAgain=Please request another SMS verification code later,Time remaining:
+CMN_MAC_LINUX_SMS_AUTHEN_BEGIN=Beginning request SMS code... 
+CMN_LINUX_PgSMSInputIp=Please input SMS server IP.
+CMN_LINUX_PgSMSInputPort=Please input SMS server port.
+CMN_NotFount_Username=Failed to request verification code, because the access user was not queried.
+CMN_NotFount_Phone_NO=Failed to request verification code, because the mobile phone number is invalid.
+CMN_MsgServer_Timeout=Failed to request verification code, because the connection to the SMS server timed out.
 
 ######### Common UI module (CUI) #########
 CUI_OKBtn=OK
@@ -46,7 +70,7 @@ CUI_USBKeyDefaultError=Unknown error.
 CUI_BoxTitle_Netconn=Network Connection.
 CUI_ConNameTooLong=The length of connection name cannot exceed 25 bytes.
 CUI_ConNameInvalid=A connection name cannot contain any of the following characters: \n \\ / : * ? \" ' < > | $
-CUI_DomainAuthAccount=��Logon-once connection
+CUI_DomainAuthAccount=☆Logon-once connection
 CUI_BeginPrgUpd=Begin program update
 CUI_PrgUpdHintHead=Client program will perform automatic update. The version after update is 
 CUI_PrgUpdHintTail=, User authentication will start again after update. Please confirm it.
@@ -54,7 +78,7 @@ CUI_PrgUpdRmndHead=Hint: Update the client program to a new version.
 CUI_PrgUpdRmndTail=, Method: Click [Operation/Online Upgrade]
 CUI_RebootHintForce=To complete the update, please click OK to restart your computer.
 CUI_RebootHintOption=You need to restart the computer to complete patch updating. Are you sure to restart right now?
-CUI_DefAnnAccName=��Quick authentication connection
+CUI_DefAnnAccName=☆Quick authentication connection
 CUI_UnkErr=Unknown error
 CUI_NoMem=Insufficient memory
 CUI_ParErr=Parameter error
@@ -91,8 +115,98 @@ SMT_CheckSmartcardBindFail=Bind smart check failed.
 
 SMT_LogTitle=Connection
 CUS_LogPwdChk=Save password(&D)
+CUS_1xDomain=Domain Name
 
 SMT_OtherOptComBox=Window Option
+
+######### IPSEC UI module (PUI) #########
+IUI_IPSECConnect=IPSEC agreement
+IUI_IPSECPtDes=IPSEC is an Internet security protocol
+IUI_DefaultConName=My IPSec connection
+IUI_IPSEC_SECURITY_PROTOCOL=Enable IPSec Security Protocol
+IUI_IPSEC_PATTERN=Pattern
+IUI_IPSEC_IDENTIY=Identity
+IUI_IPSEC_USERNAME=User Name
+IUI_IPSEC_PASSWORD=Password
+IUI_IPSEC_PATTERN_AUTO=Auto
+IUI_IPSEC_IDENTIY_CHOICE=Select
+IUI_IPSEC_ADD=join
+IUI_IPSEC_CancelBtn=cancel
+IUI_IPSEC_METHOD=verification method
+IUI_IPSEC_METHOD_A=Pre-shared-Key
+IUI_IPSEC_METHOD_B=certificate
+IUI_IPSEC_IDENITY=authentication word
+IUI_IPSEC_LNSserver=LNS server
+IUI_IPSEC_AltLNSserver=Second LNS server
+IUI_HigheCert=Senior
+IUI_IKECert=IKE
+IUI_HighSeteCert=Advanced Setting
+IUI_IKESeteCert=IKE Setting
+IUI_L2TPSet=L2TP Settings
+IUI_TunnelName=Tunnel Name
+IUI_AuthType=Select Authentication Mode
+IUI_TunnelTime=Send Hello Message Interval (s)
+IUI_TunnelPort=L2TP Port
+IUI_IPsecSet=L2TP Setting
+IUI_Encapsulation=Encapsulation Mode
+IUI_SurvivalTime=Security Alliance Lifetime
+IUI_SecurityProtocol=Security Protocol Used
+IUI_EAuthenAlgorithm=ESP Protocol Verification Algorithm
+IUI_EncryAlgorithm=ESP Protocol Encryption Algorithm
+IUI_AAuthenAlgorithm=AH Protocol Verification Algorithm
+IUI_AMode_A=CHAP
+IUI_AMode_B=PAP
+IUI_EnMode_A=Tunnel
+IUI_EnMode_B=Transport
+IUI_SeProtocol_A=ESP
+IUI_SeProtocol_B=AH
+IUI_SeProtocol_C=AH-ESP
+IUI_ESPAuthen_A=MD5
+IUI_ESPAuthen_B=SHA
+IUI_ESPAuthen_C=SHA256
+IUI_ESPAuthen_D=NULL
+IUI_EncryAuthenl_A=DES
+IUI_EncryAuthenl_B=3DES
+IUI_AHAuthen_A=MD5
+IUI_AHAuthen_B=SHA
+IUI_AHAuthen_C=SHA256
+IUI_L2TPUseTunnelPwd=UseTunnelPwd
+IUI_L2TPTunnelPwd=TunnelPwd
+IUI_L2TPAVPHidden=AVPHidden
+IUI_IKEConsult=Negotiation Mode
+IUI_IKEConsult_A=Main
+IUI_IKEConsult_B=Aggressive
+IUI_IKEIDType=Type of ID
+IUI_IKEIDType_A=ip
+IUI_IKEIDType_B=name
+IUI_IKEVAlgorithm=Verification Algorithm
+IUI_IKEVAlgorithm_A=MD5
+IUI_IKEVAlgorithm_B=SHA
+IUI_IKEEAlgorithm=Encryption Algorithm
+IUI_IKEEAlgorithm_A=DES-CBC
+IUI_IKEEAlgorithm_B=3DES-CBC
+IUI_IKEDiffieHellman=Diffie-Hellman GI
+IUI_IKEDiffieHellman_A=Group1
+IUI_IKEDiffieHellman_B=Group2
+IUI_IKEPort=IKE Port
+IUI_ISAKMPSA=ISAKMP-SA life cycle
+IUI_NOFLSG=Local security gateway name
+IUI_NOFLSGA=Remote security gateway name
+IUI_IKESendKeep=send keepalive message regularly
+IUI_IKESendKeepTime=time interval(s)
+IUI_IKEReceiveKeep=eceive keepalive message regularly
+IUI_IKEKeepOvertime=overtime(s)
+IUI_ULnsServer=Using LNS server
+IUI_UIpsecServer=Using IPSEC server
+IUI_UpsecServer=Ipsec server
+IUI_L2TPUFPS=Using PFS features
+IUI_L2TPFPS=PFS features
+IUI_L2TUPNAT=Use NAT traversal
+IUI_L2TPUFPS_A=dh-group1
+IUI_L2TPUFPS_B=dh-group2
+UI_UIpsecEadServer=Start EAD authentication
+UI_UEadServer=EAD Server Ip
+UI_UEadPort=EAD Server Port
 
 ######### Main UI module (MUI) #########
 MUI_ComfirmExitClient=Confirm Client Exit
@@ -136,7 +250,7 @@ MUI_SelLogPath=Please select the save path for log file.
 MUI_PwdCannotEmptyNReinput=The old password cannot be empty, please input a password.
 MUI_PwdDismatchNReinput=The new password and the confirm password do not match, please try again.
 MUI_NewPwdCannotEmptyNReinput=The new password cannot be empty, please input a password.
-MUI_ReadConnSumLimit=Reach the upper limit of connection sum (5) -- cannot create a new one.
+MUI_ReadConnSumLimit=Reach the upper limit of connection sum (25) -- cannot create a new one.
 MUI_ReadConnSumLimitSsl=Reach the upper limit of SSL VPN connection sum (50) -- cannot create a new one.
 MUI_BeSureToDelConn=Are you sure to delete the connection?
 MUI_AdminAskChgPwd=Administrator requires you change your password
@@ -463,6 +577,8 @@ MUI_UserNameEmpty=User name can't be empty.
 MUI_NICInfoEmpty=NIC information can't be empty.
 MUI_ChgUserPwd_Title=Change Password
 MUI_NoComponent=No Component.
+MUI_SKF_UKEY_PIN_TITLE=Smart card PIN code
+MUI_SKF_UKEY_PIN_DES=Please enter the PIN code for the GM smart card.
 
 ######### Update UI module (UUI) #########
 UUI_DownloadFail=Fail to download update file. Please check if network connection is OK.
@@ -479,6 +595,34 @@ XUI_CertCfg=Settings
 XUI_RootCertCannotEmptyTitle=Root certificate name cannot be empty.
 XUI_UserCertCannotEmptyTitle=User certificate name cannot be empty. 
 XUI_UserPrivateKeyCannotEmptyTitle=User private key name cannot be empty.
+XUI_LoadUserCertFail=Load personal certificates failed.
+XUI_LoadRootCertFail=Load root certificates failed.
+XUI_VerifyPkeyFail=The certificate and private key do not match.
+XUI_WrongAuthType=Incorrect authentication type. Please change the authentication type or contact the administrator for help.
+
+XUI_LoadGMRootCertFail=Failed to load the root certificate.
+XUI_LoadSigCertFail=Failed to load the signing certificate.
+XUI_LoadSigPkeyFail=Failed to load the signing private key.
+XUI_VerifySigPkeyFail=The signing certificate and private key do not match.
+XUI_LoadEncCertFail=Failed to load the encryption certificate.
+XUI_LoadEncPkeyFail=Failed to load the encryption private key.
+XUI_VerifyEncPkeyFail=The encryption certificate and private key do not match.
+XUI_LoadSKFLibraryFail=Failed to load the manufacturer's SKF library.
+XUI_ConnSKFUkeyFail=Failed to connect to the national commercial cryptographic card.
+XUI_OpenSKFAppFail=Failed to open the application in the smart card.
+XUI_OpenSKFConFail=Failed to open the container in the application.
+XUI_SKFVerifyPINFailed=SM2 smart card PIN verification failed. %d attempts left.
+XUI_ExportSigCertFail=Failed to read the signing certificate from the smart card.
+XUI_ExportEncCertFail=Failed to read the encryption certificate from the smart card.
+XUI_ConvertEncCertFail=Failed to convert the encryption certificate format.
+XUI_ECKeyExDataIDFail=Failed to obtain EC key extension data.
+XUI_SigPkeyFromConFail=Failed to construct the signature key.
+XUI_EncPkeyFromConFail=Failed to construct the encryption key.
+XUI_GetSKFEngineFail=Failed to construct the SKF engine.
+XUI_SetSigPkeyExDataFail=Failed to set extension data for the signature key.
+XUI_SetEncPkeyExDataFail=Failed to set extension data for the encryption key.
+XUI_SetSigPkeyEngineFail=Failed to set SKF engine for signature key.
+XUI_SetEncPkeyEngineFail=Failed to set SKF engine for encryption key.
 
 XUI_InputPwdPls=Please input the password.
 XUI_InputConNamePls=Please input connection name.
@@ -532,6 +676,7 @@ XUI_IdeAuthSucc=You have passed the identity authentication
 XUI_ConnectCut=Connection failed, please make sure user credential info is correct.
 XUI_ReConnetPrmpt=Authentication failed. Another attempt will start after 
 XUI_ReConnetPrmptEnd=.
+XUI_UnknownNetworkErr=Unknown network error
 XUI_ConnectCutByDev=Connection cut by the device forcibly.
 XUI_ServerReqUserAuth=Sever requires the user to be authenticated
 XUI_SleepForTimeOut=Link times out and enters the sleep state
@@ -674,9 +819,10 @@ PUI_LogOKBtn=Connect
 PUI_LogPropertyBtn=Properties...(&V)
 PUI_LogHighAuth=Enable advanced authentication(&H)
 PUI_LogUsbCardAuth=Smart card anthN(&K)
-PUI_LogMacAuth=MAC anthN(&M)
+PUI_LogMacAuth=MAC Auth
 PUI_PgNetWkChkAutoCon=Connect after net restore(&R)
-PUI_ResumeConnExists=A connection that initiates authentication after net restore has existed. 
+PUI_ResumeConnExists=A connection that initiates authentication after net restore has existed.
+PUI_MACAuthStatic=MAC address becomes username and password. 
 
 PUI_CreatTwoStatic=Portal Connection Basic Attributes
 PUI_CreatTwoCommentStatic=You need the username and password to access networks and select the desired service.
@@ -724,7 +870,7 @@ PUI_HintStatic=Note: Durations above are only for reference, not for accounting 
 
 ######### WLAN UI module (PUI) #########
 WUI_WLANConnect=WLAN protocol
-WUI_WLANPtDes=WLAN
+WUI_WLANPtDes=WLAN refers to wireless local area network
 MAC_LINUX_DIALOG_SSID=SSID
 MAC_LINUX_DIALOG_WIFI=WiFi connection
 WUI_DefaultConName=My WLAN connection
@@ -738,6 +884,21 @@ WUI_WLAN_PATTERN_AUTO=Auto
 WUI_WLAN_IDENTIY_CHOICE=Choose
 WUI_WLAN_ADD=join
 WUI_WLAN_CancelBtn=cancel
+WUI_WLAN_SECURITY_PROTO=Security
+WUI_WLAN_EAP_PROTO=EAP
+WUI_WLAN_USER_PRIVATE_KEY=Private key
+WUI_WLAN_USER_PRIVATE_KEY_PASS=Key password
+WUI_WLAN_ANONYMOUS_ID=Anonymous ID
+WUI_WLAN_PEAP_VER=PEAP version
+WUI_WLAN_INTERNAL_AUTH=Internal Auth
+WUI_WLAN_USER_PRIVATE_KEY_PASS_EMPTY=Please input private key password
+WUI_WLAN_CONNECT_HIDDEN_NETWORK=Connect to hidden network
+WUI_WLAN_BEGIN_SCAN_HIDDEN_AP=Beginning to scan hidden SSID
+WUI_WLAN_WAIT_SCAN_HIDDEN_AP=Scanning hidden SSID
+WUI_WLAN_SCAN_HIDDEN_AP_SUCCESS=Found hidden SSID
+WUI_WLAN_SCAN_HIDDEN_AP_FAILED=Not found hidden SSID
+WUI_WLAN_NOT_SUPPORT=The system is not adapted to wireless authentication
+
 MAC_LINUX_WIFI_CONNECT_A=require password
 MAC_LINUX_INPUT_WIFI_B=You can also place your Mac
 MAC_LINUX_INPUT_WIFI_C=To access this Wi-Fi network
@@ -746,6 +907,9 @@ MAC_LINUX_WLERR_NONTYPE=Wireless network is abnormal, please select again
 MAC_LINUX_WLERR_CONNECTFAIL=Connection failed
 MAC_LINUX_WLERR_CONNECTSUCC=connection success
 MAC_LINUX_WLERR_CONNECTCUTOFF=disconnect
+MAC_LINUX_WLERR_NOT_SUPPROT_HIDDEN=Not support hidden network
+
+MAC_LINUX_WLERR_OPENLOCA=Please enable the system location service
 
 ######### EAD UI module (EUI) #########
 EUI_EADConnect=EAD Connect
@@ -756,7 +920,6 @@ EUI_EAD_PASSWORD=Password
 EUI_EAD_PATTERN_AUTO=Auto
 EUI_EAD_IDENTIY_CHOICE=Choose
 EUI_EAD_CancelBtn=cancel
-
 ######### VPN UI module (VUI) #########
 VUI_MyVPNConnName=My VPN Connection
 VUI_Font=Arial
@@ -1210,6 +1373,7 @@ SAU_MsgAbortOnlineResecauth=The antivirus task for last check is still ongoing, 
 SAU_MsgInvalidChecklist=Invalid check parameters:
 SAU_MsgAlreadyEndSecauth=Security check session ended.
 SAU_MsgUserPCIsolated=Your computer has been isolated to the quarantine region.
+SAU_MsgUserPCCutOff=Now Current connection will be cut off.
 SAU_IssInvalidIP=Cannot communicate with EAD server, local IP address is invalid.
 SAU_IssWsaStartFail=Cannot communicate with EAD server, socket initialization failed.
 SAU_IssSocketFail=Cannot communicate with EAD server, socket creation failed.
@@ -1236,6 +1400,7 @@ SAU_SoftFailMsgHead=Security vulnerability detected in software control check,in
 SAU_RegCheckFailMsgHead=Security vulnerability detected in register check,information from administrator: 
 SAU_WeakPwdCheckFailMsgHead=Security vulnerability detected in Winlogon Password check,information from administrator: 
 SAU_SyncUserErr=Security authentication failed, and the current connection will be disconnected. Please contact with the administrator. 
+SAU_ChgPwdMessageErr=you.
 SAU_SyncHostNameErr=The host name is error. Current connection will be cut off.
 SAU_PktTooLargeErr=The security check failed because of too many security check items. Please contact the administrator.
 SAU_SyncDomainBindErr=Error occured for your computer does not bind to domain required. Current connection will be cut off.
@@ -1391,6 +1556,17 @@ SAU_MSGBlackServices= The current security check found abnormal process, the abn
 SAU_MSGWhiteServices=The current security check found an exception. The following processes must be run:
 SAU_MSGBlackSofts= The current security check found abnormal soft, the abnormal soft is:
 SAU_MSGWhiteSofts=The current security check found an exception. The following soft must be installed:
+
+SAU_ScreensaverErrActive=The screen saver is not enabled. 
+SAU_ScreensaverErrProtect=The screen saver password is not enabled.
+SAU_ScreensaverErrTimeout=Invalid screen saver wait time. The maximum wait time is 
+SAU_ScreensaverCheckFailMsgHead=Security vulnerability detected in screen saver check, information from administrator:
+SAU_MinutesEnd=minutes.
+SAU_DAMRegRemindDayHead=Please register the desktop asset through the DAM Agent in 
+SAU_DAMRegRemindDayTail= days.
+SAU_DamRegCheckFailMsgHead=Asset registration pending, information from administrator:
+
+SAU_AntiRunUnVm=The iNode client is prohibited from running on a virtual machine. The connection will be cut off.
 ######### service center module (SRV) #########
 SRV_TimeFmt=%d year %02d month %02d day %02d hour(s) %02d minute(s) %02d second(s)
 SRV_PtIniFailed=Initialization failed for this protocol, so the requested operation cannot be executed.
@@ -1538,7 +1714,7 @@ WLAN_NoWireProtoCus=The client is not authorized to use wired component.
 WLAN_HasAssociated=The other wireless network has been associated already.\n Please disconnect the current association.
 WLAN_WlanMngInfo=You select Windows to manage wireless,so you can't use iNode to associate wireless.\n Please check [Operation/Use Windows to manage wireless] and make sure this item is unchecked. 
 
-######### DAMA  UI module (DUI)  �������ֵ���Դ#########
+######### DAMA  UI module (DUI)  公共部分的资源#########
 DUI_DosGetOnline=Connected to the DAM server
 DUI_DosGetOffline=Disconnected to the DAM server
 DUI_ArsGetDone=Asset registration done
@@ -1601,7 +1777,7 @@ DUI_PlsInputAssetId=Please input asset number for current computer correctly.
 
 DUI_AssetInfo_FillHint=The items labeled with asterisk(*) cannot be left empty.
 
-######## DAMA  UI module (DUI)  ��iNode�ںϰ汾�Ķ�����Դ###########
+######## DAMA  UI module (DUI)  与iNode融合版本的额外资源###########
 DUI_DlgtTitle_Status=DAM Agent Status
 DUI_DamRunStatus=Runing Status: 
 DUI_DamRuning=Running
@@ -1627,11 +1803,13 @@ MAC_LINUX_OPERATION=&Operation
 MAC_LINUX_OPERATION_DES=Operation
 MAC_LINUX_CLIENTS_SETTING=Client &Settings
 MAC_LINUX_CLIENTS_SETTING_DES=Client Settings
+MAC_LINUX_DAM_STATUS=&DAM Agent Status
+MAC_LINUX_DAM_STATUS_DES=DAM Agent Status
 MAC_LINUX_HELP=&Help
 MAC_LINUX_HELP_DES=Help
 MAC_LINUX_ABOUT=About
-MAC_LINUX_MAIN=Net Access
 MAC_LINUX_ABOUT_DES=About
+MAC_LINUX_MAIN=Net Access
 MAC_LINUX_SECTRAP=&Trigger security check
 MAC_LINUX_SECTRAP_DES=Trigger security check
 
@@ -1659,6 +1837,7 @@ MAC_LINUX_USER_OPTIONS=User Options
 MAC_LINUX_CARRY_VERSION=Carry version info
 MAC_LINUX_UPLOAD_IP=Upload IP address
 MAC_LINUX_BROADCAST_LOGOFF=Broadcast logoff
+MAC_LINUX_EDCODE=E code
 MAC_LINUX_COMMON=:
 MAC_LINUX_AUTO_AUTH=Auto login
 MAC_LINUX_ReauthTimesStc=Retry times:
@@ -1710,8 +1889,14 @@ MAC_LINUX_SERVER_IP=Server IP
 MAC_LINUX_USER_IP=User IP
 MAC_LINUX_WkChkAutoCon=Connect after net restore
 MAC_LINUX_PgNetworkInputIp=Please input server IP.
-MAC_LINUX_PgNetworkInvalidIp=The IP you input is not valid.
+MAC_LINUX_PgNetworkInvalidIp=The server IP you input is not valid.
 MAC_LINUX_UPGRADE=Update
+MAC_LINUX_SecCheckHeadHTML=Security Check Result: 
+MAC_LINUX_secCheckHeadScore=Security Score: 
+MAC_LINUX_secCheckRiskLevel=Risk Level: 
+MAC_LINUX_secCheckRiskLevel0=Low
+MAC_LINUX_secCheckRiskLevel1=Medium
+MAC_LINUX_secCheckRiskLevel2=High
 
 #### Operation resources #####
 MAC_LINUX_ERROR_TITLE=Error Message
@@ -1733,8 +1918,10 @@ MAC_LINUX_ERROR_MSG_9=The length of user name cannot exceed 97 bytes.
 MAC_LINUX_ERROR_MSG_10=Please input the RSA Key.
 MAC_LINUX_ERROR_MSG_11=The new password and confirm password do not match, please try again.
 MAC_LINUX_ERROR_MSG_12=The new password is the same with the old password, please try again.
-
-
+MAC_LINUX_ERROR_MSG_13=The password is the initial login password. Please contact the administrator to modify the password.
+MAC_LINUX_ERROR_MSG_14=The length of user password is at least 8, and it contains at least letters, numbers and special characters.
+MAC_LINUX_ERROR_MSG_EDcode=Please input the E code.
+MAC_LINUX_ERROR_MSG_EDcodeLen=The length of E code is incorrect.
 ####### Authentication MSG #############
 MAC_LINUX_AUTHEN_CONNECT=Connecting to the network...
 MAC_LINUX_AUTHEN_BEGIN=Beginning authentication... 
@@ -1794,12 +1981,21 @@ MAC_LINUX_AUTHEN_MSG_ERROR_5=A client can not be renamed with its or others conn
 MAC_LINUX_AUTHEN_MSG_ERROR_6=Cannot rename this connection for a connection with the name you specified already exists.Please Specify a different connection name.
 
 MAC_LINUX_AUTHEN_TLS_FAIL=Client does not support certificate authentication
+MAC_LINUX_SecCheckHeadHTML=Security Check Result: 
+MAC_LINUX_secCheckHeadScore=Security Score: 
+MAC_LINUX_secCheckRiskLevel=Risk Level: 
+MAC_LINUX_secCheckRiskLevel0=Low
+MAC_LINUX_secCheckRiskLevel1=Medium
+MAC_LINUX_secCheckRiskLevel2=High
+
+MUI_ReConnect=begin re-connect
 
 MUI_FoundProgToUpdHead=Your client will be upgraded
 MUI_FoundProgToUpdEnd=later.
 MUI_UpdateNext=Your client will be updated at next startup.
 MUI_UpdateImmediate=Your client is to be upgraded immediately.
 CUI_PrgCusUpdHint=The iNode client is about to be upgraded. During the upgrade process, the client cannot provide the network access service. Click OK to start upgrade.
+CUI_PrgCusUpdHead=The iNode client is about to be upgraded.
 CUI_PrgCusUpdHintForce=An upgrade is available for the iNode client. During the upgrade process, the client cannot provide the network access service. Click OK to start upgrade.
 CUI_PrgUpdHintHead_NEW=Client upgrade program has downloaded and will perform automatic update. The version after update is
 MUI_UpdateFileNoExist=The upgrade package has been deleted. Please re-log in to download the package.
@@ -1814,8 +2010,10 @@ SLUI_AuthType=Authentication Type
 SLUI_AuthMode=Authentication Mode
 SLUI_AutoAuth=Automatic authentication at startup
 SLUI_ChooseCert=Client Certificate
+SLUI_FileCert=File Cert.
+SLUI_SmartCard=Smart Card Cert.
 SLUI_DynamicPWD=Use dynamic password verification
-SLUI_MsgAuth=Use SMS dynamic password verification
+SLUI_MsgAuth=SMS dynamic password verification
 SLUI_Domain=Domain
 SLUI_DefaultConName=My SSL VPN Connection
 SLUI_GateWayAdr=Please input gateway address.
@@ -1843,15 +2041,30 @@ SLUI_VerKey=Enter Verification Code
 SLUI_PutVerKey=Please enter the verification key.
 SLUI_GetRootCert=Please choose a root certificate file.
 SLUI_GetClientCert=Please choose a client certificate file.
+SLUI_GetClientPriKey=Please choose a client private key file.
 SLUI_ClientCertPwdEmpty=Please input the client cert password.
 SLUI_ChooseCertFile=Choose Certificate File
 SLUI_RootCertDes=Root Cert
 SLUI_ClientCertDes=Client Cert
 SLUI_ClientCertPwd=Client Password
 SLUI_GetCertBtnDes=Choose...
+SLUI_SigCert=Sign. Cert.
+SLUI_SigKey=Sign. Key
+SLUI_EncCert=Encr. Cert.
+SLUI_EncKey=Encr. Key
+SLUI_SigKeyPwd=Cert. Pass.
+SLUI_EncKeyPwd=Cert. Pass.
+SLUI_CACertUnknown=Root certificate is not set. Please click <Client Certificate> button to select a root certificate.
+SLUI_SignCertUnknown=Signature certificate is not set. Please click <Client Certificate> button to select a Signature certificate.
+SLUI_SignKeyUnknown=Signing key is not set. Please click <Client Certificate> button to select a signing key.
 UI_CONNECTION_MULTI_ACTIVE=An active connection of the same protocol already exists. Please disconnect it first.
 
-
+VUI_EadConnActive=Current connection can't login while it is using the EAD connection.
+VUI_1XConnActive=Current connection can't login while it is using the 802.1X connection.
+VUI_PortalConnActive=Current connection can't login while it is using the Portal connection.
+VUI_SSLVPNConnActive=Current connection can't login while it is using the SSL VPN connection.
+VUI_WlanConnActive=Current connection can't login while it is using the WLAN connection.
+VUI_IPsecVPNActive=Current connection can't login while it is using the L2TP IPsec VPN connection.
 
 CMN_QueringVPNParam=Querying ssl vpn gateway parameters...
 CMN_QueringDomainParam=Querying ssl vpn domain parameters...
@@ -1903,3 +2116,169 @@ SSLVPN_InputMsgVrfCode=Please enter the verification key.
 SSLVPN_MsgVrfCodeInvalid=The verification code cannot exceed 16 characters in length.
 SSLVPN_GetGatewayIPFail=Failed to get ip address of the gateway.
 SSLVPN_AutoConNotSupportVaildPic=Automatic authentication does not support verify code and RSA dynamic password.
+#########  VPN auth module (VAU) #########
+VAU_ConfigureError=Connection cannot be created. Please check network configuration
+VAU_ConnDisconnected=Connection is disconnected
+VAU_StartUseSucc=Connection is successfully established and the user is online
+
+#认证第一阶段，检查网络环境
+VAU_CheckEnv=Checking local network environments...
+VAU_CheckingEnv=Checking local network environments
+VAU_CheckEnvSucc=Local network environment check is passed
+VAU_IPSecServiceRunning=Windows IPsec Services(IPsec Services or IPsec Policy Agent) is running, please stop it and try again
+VAU_IKEServiceRunning=Windows IKE Services(IKE and AuthIP IPsec Keying Modules)is running, please stop it and try again
+#认证第二阶段，IKE协商
+VAU_IpsecAuthenticating=Processing IKE negotiation...
+VAU_IPSecStartAuthen=Processing Ike negotiation
+VAU_IPSecAuthSuccess=Ike negotiation succeed
+VAU_IKEProposalError=IKE configuration error
+VAU_IPSecProposalError=IPsec configuration error
+#认证第三阶段，建立隧道和会话
+VAU_L2TPAuthenticating=Creating tunnel and session...
+VAU_L2TPStartAuthen=Creating tunnel and session
+VAU_L2TPAuthenSuccess=Tunnel and session creation succeed
+#认证第三阶段，PPP协商
+VAU_PPPAuthenticating=Processing PPP negotiation...
+VAU_PPPStartAuthen=Processing PPP negotiation
+VAU_PPPAuthenticateSuccess=PPP negotiation succeed
+#认证第四阶段，获取IP地址
+VAU_RefreshIP=Obtaining IP address of the virtual NIC...
+VAU_RefreshIPStart=Obtaining IP address of the virtual NIC
+VAU_RefreshSuccess=IP address of the virtual NIC successfully obtained
+
+VUI_TunnelPwdError=tunnel password error
+XUI_UserNamePwdErr=User name or password error
+
+VAU_StartErrorIKE=Ike negotiation failed
+VAU_StartErrorL2TP==Failed to create tunnel or session
+VAU_StartErrorPPP=PPP negotiation failed
+VAU_StartErrorIKETimeout=Ike negotiation timeout,please check network config
+VAU_StartErrorL2TPTimeout=Tunnel and session creation timeout,please check network config
+VAU_StartErrorRefreshIPTimeout=Obtaining IP address of the virtual NIC timed out. Please check network configuration
+VAU_StartErrorPPPTimeout=PPP negotiation timeout,please check network config
+XUI_RefreshIPFail=Obtaining IP address timed out
+VUT_startErrorGetLNSip=Can not translate from LNS name to address,please check network config
+VUT_startErrorGetSecondLNSip=Can not translate from Second LNS name to address,please check network config
+VUT_startErrorLNSEmpty=The LNS Can not be empty
+VUI_InputValidLNSIP=Please enter the IP address of the LNS.
+VUT_startErrorGetIPSECip=Can not translate from IPsec-Server name to address,please check network config
+VUT_startErrorRefreshIP=Failed to refresh the IP address of the virtual NIC
+VUT_startErrorChangeUser=Failed to switch user privileges
+VUT_startErrorUpVersion=The username-version string exceeds the maximum length for authentication
+VUT_startErrorInitSocket=Failed to initialize socket. Please check network configuration  
+VUT_connErrorSystemSleep=Network is disconnected during system hibernation
+VUT_connErrorUsbKeyDown=The smart card has been unplugged
+VAU_ResumeCon=Link timed out
+
+
+VAU_StartUseFailed=Connection failed.
+VAU_ConnNotDeactive=This status of connection is not deactive
+VAU_ConnAleadyOnline=This connection already online
+
+VAU_L2TPConnectSecondLNS=Connecting Second LNS...
+######### DAMA  UI module (DUI)  独立应用版本的额外资源#########
+DUI_About=About DAM Agent(&A)...
+DUI_Config=Config(&C)...
+DUI_SoftsToInstall=Software Distribution Management(&I)...
+DUI_AgentStatus=DAM Agent Status(&S)...
+DUI_RegAssert=Register Asset(&R)...
+DUI_DlgtTitle_Config=Config
+DUI_Language=Language
+DUI_LogLevel=Log Level
+DUI_ClientName=DAM Agent
+DUI_DlgtTitle_About=About DAM Agent
+DUI_DamaName=H3C Desktop Asset Management Agent
+DUI_Version=Version: 
+
+######### DAMA  UI module (DUI)  公共部分的资源#########
+DUI_DosGetOnline=Connected to the DAM server
+DUI_DosGetOffline=Disconnected to the DAM server
+DUI_ArsGetDone=Asset registration done
+DUI_ArsGetUndone=Asset registration pending
+
+DUI_DlgTitle_AutoShutHint=Auto Shutdown Hint
+DUI_AutoShutHintHead=This computer is supposed to be shut down automatically at 
+DUI_AutoShutHintTail=. Please make your choice.
+DUI_AutoShutChoice1=OK. No problem.
+DUI_AutoShutChoice2=Please do not shut down the computer. Just let me take control.
+
+DUI_DlgTitile_ConfirmAssetInfo=Confirm Asset Info
+DUI_ConfirmAssetInfo_Hint=If the following info does not match with current computer, please click 'Cancel' to input a new asset number. 
+DUI_ConfirmAssetInfo_Hint2=If the following info does not match with current computer, please contact your system administrator.
+DUI_DlgTitile_InputAssetInfo=Input Asset Info
+DUI_InputAssetInfo_Hint=Please fill in the following info sheet for current computer correctly:
+
+DUI_StatusInfo=Status Information
+DUI_ConnStatus=Connection Status: 
+DUI_RegStatus=Asset Register Status: 
+DUI_DamOnline=Online
+DUI_DamOffline=Offline
+DUI_Registered=Registered
+DUI_Unregistered=Unregistered
+DUI_AssetNo2=AssetNo.:
+DUI_ProxyIP=ProxyIP:
+DUI_AssetOwner2=Asset Owner:
+
+DUI_Input_AssetNo=Input Asset Number
+DUI_AssetNo=AssetNo.:
+DUI_AssetOwner=Asset Owner:
+DUI_AssetGroup=Asset Group:
+DUI_AssetConfig=Model:
+DUI_AssetPosition=Position:
+DUI_AssetVendor=Vendor:
+DUI_AssetType=Type:
+DUI_AssetDescrip=Description:
+DUI_AssetType_PC=PC
+DUI_AssetType_LAPTOP=Laptop
+DUI_AssetType_WORKSTATION=WorkStation
+DUI_AssetType_SERVER=Server
+DUI_AssetType_OTHER=Other
+
+DUI_InvalidAsset_TryAgain=Invalid asset number. Please try again.
+DUI_AssetTaken_TryAgain=The asset number is taken. Please input your asset number correctly.
+DUI_PlsInputAssetId=Please input asset number for current computer correctly.
+DUI_BindFail_TryAgain=Binding the asset number fail. Please try again.
+DUI_HintForCancelInput=If current asset registering operation is cancelled, a new request will pop out in a few minutes. Are you sure to cancel this one? 
+
+DUI_AssetInfo_FillHint=The items labeled with asterisk(*) cannot be left empty.
+######## DAMA  UI module (DUI)  与iNode融合版本的额外资源###########
+DUI_DlgtTitle_Status=DAM Agent Status
+DUI_DamRunStatus=Runing Status: 
+DUI_DamRuning=Running
+DUI_DamStopped=Stopped
+
+######### passwod protection modoule  #########
+MUI_PwdEmpty=The password cannot be empty. Please set a password.
+MUI_PwdWrong=The password is incorrect. Please try again.
+MUI_RelPassWdProtDlgTitle=Unlock Password Protection
+MUI_NoPassWdProtStatic=Enter the password to unlock protection.
+MUI_UseExtendPwdStatic=Please send the random number to the administrator to get the protection password.
+MUI_RandomStatic=Random Number:
+MUI_PasswordStatic=Password:
+
+##### DIF MSG #####
+MAC_LINUX_DIF_MSG=&Messages Window
+MAC_LINUX_DIF_MSG_DES=Messages Window
+MAC_LINUX_DIF_WINDOW_TITLE=Messages Window
+MAC_LINUX_DIF_TITLE=Title
+MAC_LINUX_DIF_CONTENT=Content
+MAC_LINUX_DIF_LEVEL_TIP=Tip Messages
+MAC_LINUX_DIF_LEVEL_NOTICE=Notice Messages
+MAC_LINUX_DIF_LEVEL_WARNING=Warning Messages
+MAC_LINUX_DIF_BTN_TIP=Tip
+MAC_LINUX_DIF_BTN_NOTICE=Notice
+MAC_LINUX_DIF_BTN_WARNING=Warning
+
+Portal_LoadCertsFail=Failed to load the certificate. Please make sure the certificate is valid.
+Portal_CertsError=Server returned error message: Incorrect certificate. Please load the correct certificate.
+Portal_CertsPasswdErr=The certificate password is incorrect.
+
+CMN_MultiWindowsOS=The multi-OSs check is not passed. The connection will be cut off.
+SAU_ShareInfoCheckFailMsgHead=Security vulnerability detected in File Share check,information from administrator:
+SAU_ShareErrForbidShare=Forbid Share.
+SAU_ShareErrInvalidUser=Do not share to groups or users:
+SAU_LowestVirusVersionRequired=Lowest virus version required: 
+SAU_LowestEngineVersionRequired=Lowest Engine version required:
+CMN_reconnect=Waiting reconnect...
+CMN_NetCut=Network adapter is disabled or the connection is closed
+CMN_AddrChanged=Change IP address, please check network card settings.
