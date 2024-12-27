@@ -8,11 +8,24 @@
 
 **该项目发行版不一定适用所有人，如果无法适用，请联系你们公司内部管理员，提供定制后的老版本客户端，然后自行按照教程来封包**
 
-**Ps: 定制客户端封包：替换 inodeClient.app 和 lib 文件夹基本就可以了**
+**Ps: 定制客户端封包：替换 inodeClient.app 和 lib 文件夹基本就可以了，如果发现还是无法使用，建议将 Library、custom、也替换掉**
+
+> 如果打包过程提示.DS_store 问题，需要通过命令删除一下。.gitignore 我忘记忽略了
 
 本项目为教程：二次封装 inodeClinet 支持Macos15.
 
 当然同类型的 pkg的安装包（非 flat）可以通过相同方式二次封装。
+
+程序目录对应原包内的目录地址：
+
+| 程序目录 | 原包目录地址 |
+| ----------- | ----------- |
+| iNodeClient | iNodeClient.pkg/Contents/Archive.pax/Applications/iNodeClient |
+| lib | iNodeClient.pkg/Contents/Archive.pax/usr/local/lib |
+|  Library | iNodeClient.pkg/Contents/Archive.pax/Library |
+|  inodesys.conf | iNodeClient.pkg/Contents/Archive.pax/etc/iNode/inodesys.conf |
+|  custom | iNodeClient.pkg/Contents/Archive.pax/Applications/iNodeClient/custom |
+
 
 
 
