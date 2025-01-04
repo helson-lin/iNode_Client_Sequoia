@@ -10,6 +10,8 @@
 
 **Ps: 定制客户端封包：替换 inodeClient.app 和 lib 文件夹基本就可以了，如果发现还是无法使用，建议将 Library、custom、也替换掉**
 
+**关于网络安全检查的Skip 问题，可以配合另一个软件使用[Sauter](https://github.com/helson-lin/Sauter)。**
+
 > 如果打包过程提示.DS_store 问题，需要通过命令删除一下。.gitignore 我忘记忽略了
 
 本项目为教程：二次封装 inodeClinet 支持Macos15.
