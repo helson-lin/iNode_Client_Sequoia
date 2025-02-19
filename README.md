@@ -5,12 +5,19 @@
 </p>
 <p align="center"><span><b>inodeClient Support Macos 15</b></span></p>
 
+<p><span><b>目前已知支持的系统版本 15.0、</b></span></p>
 
 **该项目发行版不一定适用所有人，如果无法适用，请联系你们公司内部管理员，提供定制后的老版本客户端，然后自行按照教程来封包**
 
 **Ps: 定制客户端封包：替换 inodeClient.app 和 lib 文件夹基本就可以了，如果发现还是无法使用，建议将 Library、custom、也替换掉**
 
 **关于网络安全检查的Skip 问题，可以配合另一个软件使用[Sauter](https://github.com/helson-lin/Sauter)。**
+
+
+<p align="center">
+  <img style="width: 100%;" src="https://github.com/user-attachments/assets/c0c90f1b-3c2f-447e-a08c-41f2d204990c"/>
+</p>
+
 
 > 如果打包过程提示.DS_store 问题，需要通过命令删除一下。.gitignore 我忘记忽略了
 
