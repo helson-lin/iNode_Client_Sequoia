@@ -5,7 +5,7 @@
 </p>
 <p align="center" style="font-size: 28px;"><span><b>inodeClient Support Macos 15</b></span></p>
 
-$\textcolor{red}{\textsf{目前已知支持的系统版本 15.0、15.2、15.4}}$
+$\textcolor{red}{\textsf{目前已知支持的系统版本 15.0、15.2、15.4、15.6.1}}$
 
 **该项目发行版不一定适用所有人，如果无法适用，请联系你们公司内部管理员，提供定制后的老版本客户端，然后自行按照教程来封包**
 
