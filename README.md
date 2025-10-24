@@ -11,7 +11,7 @@ $\textcolor{red}{\textsf{目前已知支持的系统版本 15.0、15.2、15.4、
 
 **Ps: 定制客户端封包：替换 inodeClient.app 和 lib 文件夹基本就可以了，如果发现还是无法使用，建议将 Library、custom、也替换掉**
 
-**关于网络安全检查的Skip 问题，可以配合另一个软件使用[Sauter](https://github.com/helson-lin/Sauter)。**
+**关于网络安全检查的Skip 问题，可以配合另一个脚本使用[inode_safe_check_skip_sh](https://github.com/helson-lin/inode_safe_check_skip_sh)。**
 
 
 <p align="center">
